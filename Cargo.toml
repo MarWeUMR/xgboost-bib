@@ -1,5 +1,5 @@
 [package]
-name = "xgboost-sys"
+name = "xgboost-bib"
 version = "0.2.0"
 authors = ["Dave Challis <dave@suicas.net>"]
 links = "xgboost"
