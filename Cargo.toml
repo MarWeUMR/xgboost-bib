@@ -1,11 +1,10 @@
 [package]
 name = "xgboost-bib"
-version = "0.2.0"
-authors = ["Dave Challis <dave@suicas.net>"]
+version = "0.1.0"
 links = "xgboost"
 build = "build.rs"
 license = "MIT"
-repository = "https://github.com/davechallis/rust-xgboost"
+repository = "https://github.com/MarWeUMR/xgboost-bib"
 description = "Native bindings to the xgboost library"
 readme = "README.md"
 
