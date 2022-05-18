@@ -13,6 +13,7 @@ libc = "*"
 
 [build-dependencies]
 bindgen = "*"
+cmake = "*"
 
 [lib]
 doctest = false # important because docstring tests fail with bindgen!
