@@ -45,7 +45,7 @@ fn main() {
 
     println!("cargo:rustc-link-search={}", xgb_root.join("lib").display());
     println!("cargo:rustc-link-search={}", xgb_root.join("rabit/lib").display());
-    println!("cargo:rustc-link-search={}", xgb_root.join("dmlc-core").display());
+    // println!("cargo:rustc-link-search={}", xgb_root.join("dmlc-core").display());
 
     // link to appropriate C++ lib
     if target.contains("apple") {
