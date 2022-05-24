@@ -13,6 +13,7 @@ fn main() {
         .define("BUILD_STATIC_LIB", "ON")
         .build();
 
+    // CONFIG BINDGEN
     let bindings = bindgen::Builder::default()
         .header("wrapper.h")
         .clang_args(&["-x", "c++", "-std=c++11"])
@@ -27,11 +28,13 @@ fn main() {
         .generate()
         .expect("Unable to generate bindings.");
 
+    // GENERATE THE BINDINGS
     let out_path = PathBuf::from(env::var("OUT_DIR").unwrap());
     bindings
         .write_to_file(out_path.join("bindings.rs"))
         .expect("Couldn't write bindings.");
 
+    // LINK STUFF (LINUX)
     println!("cargo:rustc-link-search={}", out_path.join("lib").display());
     println!("cargo:rustc-link-lib=xgboost");
     println!("cargo:rustc-link-lib=dmlc");
